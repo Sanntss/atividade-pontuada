@@ -1,30 +1,29 @@
 programa {
-  funcao inicio() {
-    //Exibindo Variáveis
-    cadeia nome
-    cadeia sexo
-    cadeia estadoCivil
-    cadeia casada
-    
-    
-    //pedindo Dados do usuário 
-    escreva("\nDigite o nome: ")
-    leia(nome)
-
-    escreva("\nDigite o sexo: ")
-    leia(sexo)
-
-    escreva("\nDigite o estadoCivil: ")
-    leia(estadoCivil)
-
-    se (sexo == "F" e estadoCivil == "casada") {
-    escreva("\nSolicitar tempo de casada: ")
-    leia(casada)
-    } senao {
-     escreva("\nObrigado pela informação")      
   
+  funcao inicio() { 
+   //Declarando variáveis
+  real primeiroNumero, segundoNumero, terceiroNumero
+  real soma
 
-       
+   //solicitando dados ao usuário
+
+    escreva("\nDigite o primeiroNumero: ")
+    leia(primeiroNumero)
+
+    escreva("\nDigite o segundoNumero: ")
+   leia(segundoNumero)
+
+      escreva("\nDigite o terceiroNumero: ")
+  leia(terceiroNumero)
+
+     se (primeiroNumero + segundoNumero > terceiroNumero) {
+    escreva("\nA soma é maior que o terceiro Número")
+    } senao {
+    escreva("\nA soma é menor que o terceiro Número")
+
+                          
+
+
+}
   }
- }
 }
