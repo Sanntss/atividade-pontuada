@@ -1,26 +1,55 @@
 programa {
-  funcao inicio() { 
-                   //Declarando variáveis
-                   real primeiroNumero, segundoNumero, terceiroNumero
-                   real soma
+  funcao inicio() {
+    cadeia fruta 
+    inteiro kilo
+    real preco, valorTotal, desconto
 
-                   //solicitando dados ao usuário
+    escreva("\nDigite qual é a fruta desejada?")
+    leia(fruta)
 
-                   escreva("\nDigite o primeiroNumero: ")
-                    leia(primeiroNumero)
-
-                    escreva("\nDigite o segundoNumero: ")
-                    leia(segundoNumero)
-                    
-                    escreva("\nDigite o terceiroNumero: ")
-                    leia(terceiroNumero)
-
-                    se (primeiroNumero + segundoNumero > terceiroNumero) {
-                    escreva("\nA soma é maior que o terceiro Número")
-                    } senao {
-                      escreva("\nA soma é menor que o terceiro Número")
-
-                    }               
-
+    escolha(fruta){
+      caso "morango": 
+      escreva("\nQuantos kilos deseja?")
+      leia(kilo)
+      se(kilo<=5){
+      preco = 2.50
+      valorTotal= preco * kilo
+      escreva ("O valor total a pagar é:", valorTotal)
+      }
+      se(kilo>5 e kilo <=8){
+      preco = 2.20
+      valorTotal= preco * kilo
+      escreva("O valor total a pagar é:", valorTotal)
+    }
+    se(kilo >8) {
+     preco = 2.20
+     valorTotal= preco * kilo
+     desconto= valorTotal - (valorTotal*(10/100))
+     escreva("o valor total a pagar com desconto de 10% é:", desconto)
+     escreva("\n0 Valor total a pagar antes do desconto era de:", valorTotal) 
+    }
+    pare
+    caso "maçã":
+    escreva("\nQuantos kilos deseja?")
+      leia(kilo)
+      se(kilo<=5){
+      preco = 1.80
+      valorTotal= preco * kilo
+      escreva ("O valor total a pagar é:", valorTotal)
+      }
+      se(kilo>5 e kilo <=8){
+      preco = 1.50
+      valorTotal= preco * kilo
+      escreva("O valor total a pagar é:", valorTotal)
+    }
+    se(kilo >8) {
+     preco = 1.50
+     valorTotal= preco * kilo
+     desconto= valorTotal - (valorTotal*(10/100))
+     escreva("o valor total a pagar com desconto de 10% é:", desconto)
+     escreva("\n0 Valor total a pagar antes do desconto era de:", valorTotal) 
+    }
+    pare
   }
+}
 }
